@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1cmualh233lg"]
+
+[ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://PieceHandler.tscn" id="1_t5suq"]
+[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Pieces.tscn" id="2_mtu6r"]
+[ext_resource type="PackedScene" uid="uid://bpug2ssvq36w6" path="res://PieceSelector.tscn" id="3_mkr45"]
+[ext_resource type="PackedScene" uid="uid://bjq8ge6bty1x3" path="res://PieceChecker.tscn" id="4_t71t7"]
+
+[node name="Nivel" type="Node2D"]
+
+[node name="PieceHandler" parent="." node_paths=PackedStringArray("pieces_holder", "piece_checker") instance=ExtResource("1_t5suq")]
+pieces_holder = NodePath("../Holder")
+piece_checker = NodePath("../CheckHandle")
+moves = 5
+
+[node name="Holder" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(-75, -150)
+
+[node name="Pieces" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(-150, 1)
+piece_color = 2
+
+[node name="Pieces2" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(0, 1)
+
+[node name="Pieces3" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(150, 0)
+piece_color = 2
+
+[node name="Pieces4" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(300, 0)
+piece_color = 2
+
+[node name="Pieces5" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(-150, 150)
+
+[node name="Pieces6" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(0, 150)
+piece_color = 2
+
+[node name="Pieces7" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(150, 150)
+
+[node name="Pieces8" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(300, 150)
+
+[node name="Pieces9" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(-150, 300)
+piece_color = 2
+
+[node name="Pieces10" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(0, 300)
+piece_color = 2
+
+[node name="Pieces11" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(150, 300)
+piece_color = 2
+
+[node name="Pieces12" parent="Holder" instance=ExtResource("2_mtu6r")]
+position = Vector2(300, 300)
+piece_color = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PieceSelector" parent="." instance=ExtResource("3_mkr45")]
+visible = false
+position = Vector2(-319, 26)
+
+[node name="CheckHandle" type="Node2D" parent="."]
+
+[node name="PieceChecker" parent="CheckHandle" node_paths=PackedStringArray("pieces") instance=ExtResource("4_t71t7")]
+pieces = NodePath("../../Holder")
+required = 2
+last_piece = 4
+
+[node name="PieceChecker2" parent="CheckHandle" node_paths=PackedStringArray("pieces") instance=ExtResource("4_t71t7")]
+pieces = NodePath("../../Holder")
+first_piece = 4
+last_piece = 8
+
+[node name="PieceChecker3" parent="CheckHandle" node_paths=PackedStringArray("pieces") instance=ExtResource("4_t71t7")]
+pieces = NodePath("../../Holder")
+required = 2
+first_piece = 8
+last_piece = 12

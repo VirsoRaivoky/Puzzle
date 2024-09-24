@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjq8ge6bty1x3"]
+
+[ext_resource type="Script" path="res://PieceChecker.gd" id="1_lyn0u"]
+
+[node name="PieceChecker" type="Node2D"]
+script = ExtResource("1_lyn0u")
