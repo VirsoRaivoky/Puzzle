@@ -1,16 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://cr43mahmlv3eh"]
 
-[ext_resource type="Script" path="res://Pieces.gd" id="1_y8e4d"]
-[ext_resource type="Texture2D" uid="uid://b10reesqcndss" path="res://icon.svg" id="2_npev4"]
+[ext_resource type="Script" path="res://Scripts/Pieces.gd" id="1_y8e4d"]
+[ext_resource type="Texture2D" uid="uid://u6meppqs7qnc" path="res://Sprites/Ring.png" id="3_noo1x"]
 
 [node name="Pieces" type="Node2D"]
 script = ExtResource("1_y8e4d")
 
 [node name="Sprites" type="Node2D" parent="."]
 
-[node name="Blue" type="Sprite2D" parent="Sprites"]
-texture = ExtResource("2_npev4")
+[node name="Sprite2D" type="Sprite2D" parent="Sprites"]
 
-[node name="Red" type="Sprite2D" parent="Sprites"]
-modulate = Color(1, 0, 0, 1)
-texture = ExtResource("2_npev4")
+[node name="Ring" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Ring"]
+texture = ExtResource("3_noo1x")

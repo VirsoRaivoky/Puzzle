@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://btba6xd01nrll"]
+
+[ext_resource type="Script" path="res://LevelSelect.gd" id="1_koraf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_koraf")
+
+[node name="Level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 90.0
+offset_right = 361.0
+offset_bottom = 173.0
+text = "1"
+
+[node name="Level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 90.0
+offset_right = 481.0
+offset_bottom = 173.0
+text = "2"
+
+[node name="Level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 90.0
+offset_right = 601.0
+offset_bottom = 173.0
+text = "3"
+
+[node name="Level4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 90.0
+offset_right = 721.0
+offset_bottom = 173.0
+text = "4"
+
+[node name="Level5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 90.0
+offset_right = 841.0
+offset_bottom = 173.0
+text = "5"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]

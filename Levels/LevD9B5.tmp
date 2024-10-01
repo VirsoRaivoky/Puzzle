@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1cmualh233lg"]
+
+[ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://PieceHandler.tscn" id="1_t5suq"]
+[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Pieces.tscn" id="2_mtu6r"]
+
+[node name="Nivel" type="Node2D"]
+
+[node name="PieceHandler" parent="." instance=ExtResource("1_t5suq")]
+position = Vector2(582, 325)
+moves = 5
+
+[node name="Pieces" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-225, -149)
+piece_color = 2
+
+[node name="Pieces2" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-75, -149)
+
+[node name="Pieces3" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(75, -150)
+piece_color = 2
+
+[node name="Pieces4" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(225, -150)
+piece_color = 2
+
+[node name="Pieces5" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-225, 0)
+
+[node name="Pieces6" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-75, 0)
+piece_color = 2
+
+[node name="Pieces7" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(75, 0)
+
+[node name="Pieces8" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(225, 0)
+
+[node name="Pieces9" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-225, 150)
+piece_color = 2
+
+[node name="Pieces10" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(-75, 150)
+piece_color = 2
+
+[node name="Pieces11" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(75, 150)
+piece_color = 2
+
+[node name="Pieces12" parent="PieceHandler" instance=ExtResource("2_mtu6r")]
+position = Vector2(225, 150)
+piece_color = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(582, 325)
