@@ -1,0 +1,201 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6n8tks5rhxvc"]
+
+[ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://Entities/PieceHandler.tscn" id="1_nqvip"]
+[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Entities/Pieces.tscn" id="2_720dm"]
+[ext_resource type="Texture2D" uid="uid://ci5ernyn02oq7" path="res://Sprites/Table.png" id="3_ssfms"]
+[ext_resource type="Texture2D" uid="uid://2re3wy3pknvs" path="res://Sprites/MarkerRing.png" id="4_pvnn6"]
+[ext_resource type="Texture2D" uid="uid://olo00ow285dm" path="res://Sprites/GreenMarker.png" id="5_e3asb"]
+[ext_resource type="Texture2D" uid="uid://ck1ff52acpuxy" path="res://Sprites/RedMarker.png" id="6_habb1"]
+[ext_resource type="Texture2D" uid="uid://bktbajsrgdqyn" path="res://Sprites/BlueMarker.png" id="7_wc734"]
+[ext_resource type="Texture2D" uid="uid://bltnv4u2ugre8" path="res://Sprites/Background.png" id="8_wc83h"]
+
+[node name="Set" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(582, 325)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 44.0001
+offset_right = 187.0
+offset_bottom = 77.0001
+
+[node name="PieceHandler" parent="." node_paths=PackedStringArray("info") instance=ExtResource("1_nqvip")]
+position = Vector2(582, 325)
+scale = Vector2(0.8, 0.8)
+info = NodePath("../Label")
+rows = 5
+
+[node name="Pieces" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-260, -242.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 1
+
+[node name="Pieces2" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-130, -242.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 1
+
+[node name="Pieces3" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(0, -242.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 2
+
+[node name="Pieces4" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(130, -242.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 1
+
+[node name="Pieces5" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(260, -242.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 2
+
+[node name="Pieces6" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-260, -122.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 1
+
+[node name="Pieces7" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-130, -122.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 2
+
+[node name="Pieces8" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(0, -122.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces9" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(130, -122.5)
+scale = Vector2(0.8, 0.8)
+piece_color = 2
+
+[node name="Pieces10" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(260, -122.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces11" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-260, -2.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces12" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-130, -2.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces13" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(0, -2.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces14" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(130, -2.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces15" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(260, -2.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces16" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-260, 117.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces17" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-130, 117.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces18" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(0, 117.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces19" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(130, 117.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces20" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(260, 117.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces21" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-260, 237.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces22" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(-130, 237.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces23" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(0, 237.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces24" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(130, 237.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Pieces25" parent="PieceHandler" instance=ExtResource("2_720dm")]
+position = Vector2(260, 237.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(579.5, 326)
+scale = Vector2(0.9525, 0.728889)
+texture = ExtResource("8_wc83h")
+
+[node name="Table" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(582, 323)
+scale = Vector2(0.510313, 0.49125)
+texture = ExtResource("3_ssfms")
+
+[node name="MarkerRing" type="Sprite2D" parent="Table"]
+position = Vector2(930.802, -301.272)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing"]
+texture = ExtResource("5_e3asb")
+
+[node name="MarkerRing2" type="Sprite2D" parent="Table"]
+position = Vector2(930.802, 4.07135)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing2"]
+texture = ExtResource("6_habb1")
+
+[node name="MarkerRing3" type="Sprite2D" parent="Table"]
+position = Vector2(930.802, 309.415)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing3"]
+texture = ExtResource("7_wc734")
+
+[node name="MarkerRing4" type="Sprite2D" parent="Table"]
+position = Vector2(-938.641, -301.272)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing4"]
+texture = ExtResource("5_e3asb")
+
+[node name="MarkerRing5" type="Sprite2D" parent="Table"]
+position = Vector2(-938.64, 4.07129)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing5"]
+texture = ExtResource("6_habb1")
+
+[node name="MarkerRing6" type="Sprite2D" parent="Table"]
+position = Vector2(-938.641, 309.415)
+rotation = 1.5708
+scale = Vector2(1.43719, 1.26829)
+texture = ExtResource("4_pvnn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing6"]
+texture = ExtResource("7_wc734")

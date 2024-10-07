@@ -7,13 +7,11 @@ func _ready():
 
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://LevelSelect.tscn")
+	get_tree().change_scene_to_file("res://UI/LevelSelect.tscn")
 	
 
 func _on_button_2_pressed():
 	pass
-	#Global.level_index = 2
-	#get_tree().change_scene_to_file("res://Levels/Level1.tscn")
 
 
 func _on_button_3_pressed():

@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Puzzlle"
-run/main_scene="res://Menu.tscn"
+run/main_scene="res://UI/Menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global.tscn"
+Global="*res://Entities/Global.tscn"
 
 [display]
 

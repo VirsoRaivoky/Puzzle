@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cveqhxji75y0m"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_ky2ew"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_bn3uy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.86
-script = ExtResource("1_ky2ew")
+script = ExtResource("1_bn3uy")
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 1

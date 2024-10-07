@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btba6xd01nrll"]
+[gd_scene load_steps=3 format=3 uid="uid://btba6xd01nrll"]
 
-[ext_resource type="Script" path="res://LevelSelect.gd" id="1_koraf"]
+[ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_murvk"]
+[ext_resource type="Script" path="res://Scripts/LevelButton.gd" id="2_5yh3j"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_koraf")
+script = ExtResource("1_murvk")
 
 [node name="Level1" type="Button" parent="."]
 layout_mode = 0
@@ -53,8 +54,31 @@ offset_right = 841.0
 offset_bottom = 173.0
 text = "5"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 366.0
+offset_right = 275.0
+offset_bottom = 416.0
+text = "N1"
+script = ExtResource("2_5yh3j")
+level_moves = 1
+piece_colors = [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 366.0
+offset_right = 406.0
+offset_bottom = 416.0
+text = "N1"
+script = ExtResource("2_5yh3j")
+piece_colors = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2]
+
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

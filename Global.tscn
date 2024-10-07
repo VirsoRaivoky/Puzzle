@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://0c5n4bk2tu4d"]
-
-[ext_resource type="Script" path="res://Scripts/Global.gd" id="1_k2c15"]
-[ext_resource type="PackedScene" uid="uid://f042pa335fga" path="res://LevelScreen.tscn" id="2_t4u1q"]
-
-[node name="Global" type="Node2D"]
-script = ExtResource("1_k2c15")
-
-[node name="Control" parent="." instance=ExtResource("2_t4u1q")]
