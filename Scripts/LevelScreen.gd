@@ -1,10 +1,8 @@
 extends Control
 
 signal level_completed
-signal level_retry
 @onready var label = $Label
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.level_screen = self
 	hide()
@@ -14,15 +12,11 @@ func _ready():
 func _on_level_completed():
 	show()
 	label.text = "Finalizado!"
-	
-
-func on_level_retry():
-	get_tree().change_scene_to_file("res://Levels/Level1.tscn")
 
 
 func _on_retry_pressed():
 	hide()
-	get_tree().change_scene_to_file("res://Levels/Level1.tscn")
+	get_tree().change_scene_to_file(Global.get_set())
 
 
 func _on_next_pressed():

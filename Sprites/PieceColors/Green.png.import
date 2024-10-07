@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7lblr6wxecgg"
-path="res://.godot/imported/Purple.png-29126365a4982e99fef6dc74154e2b98.ctex"
+uid="uid://bmhbl7q7hwxfa"
+path="res://.godot/imported/Green.png-1779bc588db2cc48fbd58b8dac6de7a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Purple.png"
-dest_files=["res://.godot/imported/Purple.png-29126365a4982e99fef6dc74154e2b98.ctex"]
+source_file="res://Sprites/PieceColors/Green.png"
+dest_files=["res://.godot/imported/Green.png-1779bc588db2cc48fbd58b8dac6de7a1.ctex"]
 
 [params]
 

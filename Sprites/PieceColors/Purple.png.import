@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2jkrn3wxufdo"
-path="res://.godot/imported/Orange.png-72e15beca8ff2c4806b45128cfc5bc80.ctex"
+uid="uid://7lblr6wxecgg"
+path="res://.godot/imported/Purple.png-32e57ca400586b3b75084a6b65ef84e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Orange.png"
-dest_files=["res://.godot/imported/Orange.png-72e15beca8ff2c4806b45128cfc5bc80.ctex"]
+source_file="res://Sprites/PieceColors/Purple.png"
+dest_files=["res://.godot/imported/Purple.png-32e57ca400586b3b75084a6b65ef84e3.ctex"]
 
 [params]
 

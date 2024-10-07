@@ -7,9 +7,11 @@ extends Node2D
 var right_position: int
 var moves: int 
 var index: int = 0
-var pieces: Array
 
+var colors_to_match: Array
+var pieces: Array
 var selectors_list: Array
+
 var selector_l1
 var selector_l2
 var selector_r1 
@@ -29,16 +31,16 @@ func _process(_delta)-> void:
 	
 	if moves <= 0:
 		await get_tree().create_timer(0.4).timeout
-		if check_piece():
+		if check_piece(colors_to_match):
 			Global.level_screen.level_completed.emit()
 		else:
-			get_tree().change_scene_to_file("res://Levels/Level1.tscn")
+			Global.load_level(Global.level_index, Global.set_index)
 
 
 func setup_game():
 	
-	var current_level = Global.level_set
-	print(current_level)
+	var current_level = Global.get_level_set()
+	colors_to_match = Global.match_colors
 	moves = Global.level_moves
 	pieces = get_children()
 	@warning_ignore("integer_division")
@@ -136,9 +138,8 @@ func check_movement(value: int)-> bool:
 	return value < move_limit
 
 
-func check_piece() -> bool:
+func check_piece(colors_match: Array) -> bool:
 	
-	var right_colors: Array = [0,2,1]
 	for r in rows:
 		@warning_ignore("integer_division")
 		var m = pieces.size() / rows
@@ -147,7 +148,7 @@ func check_piece() -> bool:
 		var sliced = pieces.slice(initial, final)
 		
 		for s in sliced:
-			if s.piece_color != right_colors[r]:
+			if s.piece_color != colors_match[r]:
 				return false
 	return true
 			

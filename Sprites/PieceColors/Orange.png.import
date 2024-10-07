@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj4lbj5cq054u"
-path="res://.godot/imported/Indicator.png-b171b8f2eef452c9f7c973f19953e921.ctex"
+uid="uid://b2jkrn3wxufdo"
+path="res://.godot/imported/Orange.png-4a26093827aef840277f5cb83e8c418d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Indicator.png"
-dest_files=["res://.godot/imported/Indicator.png-b171b8f2eef452c9f7c973f19953e921.ctex"]
+source_file="res://Sprites/PieceColors/Orange.png"
+dest_files=["res://.godot/imported/Orange.png-4a26093827aef840277f5cb83e8c418d.ctex"]
 
 [params]
 
