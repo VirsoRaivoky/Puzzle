@@ -8,9 +8,9 @@ var level_index: int = 1
 var set_index: int = 0
 var match_colors: Array
 
-var level1_1: Array = [1, 2, 1,
-					   2, 0, 0, 
-					   0, 1, 2]
+var level1_1: Array = [1, 1, 2,
+					   2, 1, 2, 
+					   0, 0, 0]
 					
 var level1_2: Array = [1, 2, 1,
 					   2, 0, 0, 
@@ -44,8 +44,8 @@ func get_level_set():
 	
 	match level_index:
 		1:
-			level_moves = 3
-			match_colors = [2, 4, 0]
+			level_moves = 1
+			match_colors = [1, 2, 0]
 			return level1_1
 		2:
 			level_moves = 4
@@ -65,7 +65,7 @@ func get_level_set():
 			return level1_5
 		6:
 			level_moves = 1
-			match_colors = [0, 1, 2, 3, 4]
+			match_colors = [1, 1, 2, 3, 4]
 			return level2_1
 
 func get_set():

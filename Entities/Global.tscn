@@ -7,3 +7,10 @@
 script = ExtResource("1_ubsih")
 
 [node name="Control" parent="." instance=ExtResource("2_xucts")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1036.0
+offset_top = 18.0
+offset_right = 1112.0
+offset_bottom = 88.0
+text = "||"

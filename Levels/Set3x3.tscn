@@ -7,9 +7,6 @@
 
 [node name="Nivel" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(582, 325)
-
 [node name="Table" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(583, 328)
@@ -71,19 +68,19 @@ position = Vector2(393, 241)
 
 [node name="Marker2" parent="Markers" instance=ExtResource("4_kbleu")]
 position = Vector2(393, 337)
-color_type = 2
+color_type = 1
 
 [node name="Marker3" parent="Markers" instance=ExtResource("4_kbleu")]
 position = Vector2(393, 433)
-color_type = 1
+color_type = 2
 
 [node name="Marker4" parent="Markers" instance=ExtResource("4_kbleu")]
 position = Vector2(763, 241)
 
 [node name="Marker5" parent="Markers" instance=ExtResource("4_kbleu")]
 position = Vector2(763, 337)
-color_type = 2
+color_type = 1
 
 [node name="Marker6" parent="Markers" instance=ExtResource("4_kbleu")]
 position = Vector2(763, 433)
-color_type = 1
+color_type = 2

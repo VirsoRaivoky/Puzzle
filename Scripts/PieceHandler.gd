@@ -21,7 +21,6 @@ func _ready():
 	Global.piece_handler = self
 	selectors_list = [selector_l1, selector_r2, selector_r1, selector_l2]
 	setup_game()
-	
 
 
 func _process(_delta)-> void:
@@ -34,7 +33,10 @@ func _process(_delta)-> void:
 		if check_piece(colors_to_match):
 			Global.level_screen.level_completed.emit()
 		else:
-			Global.load_level(Global.level_index, Global.set_index)
+			for i in range(pieces.size()):
+				pieces[i].set_color(Global.get_level_set()[i])
+			moves = Global.level_moves
+
 
 
 func setup_game():
@@ -51,7 +53,7 @@ func setup_game():
 		pieces[i].set_color(current_level[i])
 	
 	spawn_selectors()
-	move_selector()
+
 
 func inputs(): 
 	move_selector()
