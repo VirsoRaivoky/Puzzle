@@ -21,7 +21,7 @@ func _ready():
 	Global.piece_handler = self
 	selectors_list = [selector_l1, selector_r2, selector_r1, selector_l2]
 	setup_game()
-	move_selector()
+	
 
 
 func _process(_delta)-> void:
@@ -42,16 +42,16 @@ func setup_game():
 	var current_level = Global.get_level_set()
 	colors_to_match = Global.match_colors
 	moves = Global.level_moves
+	
 	pieces = get_children()
 	@warning_ignore("integer_division")
 	right_position = pieces.size() / rows
 	
 	for i in range(min(pieces.size(), current_level.size())):
 		pieces[i].set_color(current_level[i])
-		
-		
+	
 	spawn_selectors()
-
+	move_selector()
 
 func inputs(): 
 	move_selector()

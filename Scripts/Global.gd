@@ -8,14 +8,29 @@ var level_index: int = 1
 var set_index: int = 0
 var match_colors: Array
 
-var level1: Array = [1, 2, 1, 2, 0, 0, 0, 1, 2]
-var level2: Array = [1, 2, 1, 2, 1, 2, 0, 0, 0, 2, 1, 0]
-var level3: Array = [1, 1, 1, 2, 2, 2, 0, 2, 1, 0, 0, 0]
-var level4: Array = [1, 1, 2, 0, 1, 1, 2, 2, 0, 2, 0, 0]
-var level5: Array = [2, 2, 2, 0, 1, 1, 1, 0, 0, 2, 1, 0]
+var level1_1: Array = [1, 2, 1,
+					   2, 0, 0, 
+					   0, 1, 2]
+					
+var level1_2: Array = [1, 2, 1,
+					   2, 0, 0, 
+					   0, 1, 2]
+					
+var level1_3: Array = [1, 2, 1,
+					   2, 0, 0, 
+					   0, 1, 2]
+					
+var level1_4: Array = [1, 2, 1,
+					   2, 0, 0, 
+					   0, 1, 2]
+					
+var level1_5: Array = [1, 2, 1,
+					   2, 0, 0, 
+					   0, 1, 2]
 
-var level1_2: Array = [1, 1, 1, 1, 1,
-					   0, 0, 0, 0, 0,
+
+var level2_1: Array = [0, 0, 0, 0, 0,  
+					   1, 1, 1, 1, 1,
 					   2, 2, 2, 2, 2,
 					   3, 3, 3, 3, 3,
 					   4, 4, 4, 4, 4]
@@ -30,28 +45,28 @@ func get_level_set():
 	match level_index:
 		1:
 			level_moves = 3
-			match_colors = [1, 2, 0]
-			return level1
+			match_colors = [2, 4, 0]
+			return level1_1
 		2:
 			level_moves = 4
 			match_colors = [1, 2, 0]
-			return level2
+			return level1_2
 		3: 
 			level_moves = 5
 			match_colors = [1, 2, 0]
-			return level3
+			return level1_3
 		4:
 			level_moves = 6
 			match_colors = [1, 2, 0]
-			return level4
+			return level1_4
 		5:
 			level_moves = 6
 			match_colors = [1, 2, 0]
-			return level5
+			return level1_5
 		6:
 			level_moves = 1
-			match_colors = [1, 0, 2, 3, 4]
-			return level1_2
+			match_colors = [0, 1, 2, 3, 4]
+			return level2_1
 
 func get_set():
 	match set_index: 

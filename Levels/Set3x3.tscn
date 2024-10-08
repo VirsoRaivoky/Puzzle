@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1cmualh233lg"]
+[gd_scene load_steps=5 format=3 uid="uid://c1cmualh233lg"]
 
 [ext_resource type="Texture2D" uid="uid://ci5ernyn02oq7" path="res://Sprites/Background/Table.png" id="1_ch8bn"]
-[ext_resource type="Texture2D" uid="uid://2re3wy3pknvs" path="res://Sprites/MarkerRing.png" id="2_mbtmk"]
-[ext_resource type="Texture2D" uid="uid://olo00ow285dm" path="res://Sprites/GreenMarker.png" id="3_kp7t2"]
-[ext_resource type="Texture2D" uid="uid://ck1ff52acpuxy" path="res://Sprites/RedMarker.png" id="4_h7j8o"]
-[ext_resource type="Texture2D" uid="uid://bktbajsrgdqyn" path="res://Sprites/BlueMarker.png" id="5_nvf04"]
+[ext_resource type="PackedScene" uid="uid://dtgcqoo8fnshn" path="res://Marker.tscn" id="4_kbleu"]
 [ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://Entities/PieceHandler.tscn" id="6_agays"]
 [ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Entities/Pieces.tscn" id="7_u7pw0"]
 
@@ -18,60 +15,6 @@ z_index = -1
 position = Vector2(583, 328)
 scale = Vector2(0.510313, 0.49125)
 texture = ExtResource("1_ch8bn")
-
-[node name="MarkerRing" type="Sprite2D" parent="Table"]
-position = Vector2(930.802, -301.272)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing"]
-texture = ExtResource("3_kp7t2")
-
-[node name="MarkerRing2" type="Sprite2D" parent="Table"]
-position = Vector2(930.802, 4.07135)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing2"]
-texture = ExtResource("4_h7j8o")
-
-[node name="MarkerRing3" type="Sprite2D" parent="Table"]
-position = Vector2(930.802, 309.415)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing3"]
-texture = ExtResource("5_nvf04")
-
-[node name="MarkerRing4" type="Sprite2D" parent="Table"]
-position = Vector2(-938.641, -301.272)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing4"]
-texture = ExtResource("3_kp7t2")
-
-[node name="MarkerRing5" type="Sprite2D" parent="Table"]
-position = Vector2(-938.64, 4.07129)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing5"]
-texture = ExtResource("4_h7j8o")
-
-[node name="MarkerRing6" type="Sprite2D" parent="Table"]
-position = Vector2(-938.641, 309.415)
-rotation = 1.5708
-scale = Vector2(1.43719, 1.26829)
-texture = ExtResource("2_mbtmk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Table/MarkerRing6"]
-texture = ExtResource("5_nvf04")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 205.0
@@ -120,3 +63,27 @@ scale = Vector2(0.8, 0.8)
 [node name="Pieces13" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
 position = Vector2(128.75, 103.75)
 scale = Vector2(0.8, 0.8)
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Marker" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(393, 241)
+
+[node name="Marker2" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(393, 337)
+color_type = 2
+
+[node name="Marker3" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(393, 433)
+color_type = 1
+
+[node name="Marker4" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(763, 241)
+
+[node name="Marker5" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(763, 337)
+color_type = 2
+
+[node name="Marker6" parent="Markers" instance=ExtResource("4_kbleu")]
+position = Vector2(763, 433)
+color_type = 1
