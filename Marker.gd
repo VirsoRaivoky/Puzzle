@@ -20,3 +20,7 @@ func set_color(color: int):
 			texture = load("res://Sprites/PieceColors/Orange.png")
 		4: 
 			texture = load("res://Sprites/PieceColors/Turquoise.png")
+		5: 
+			texture = load("res://Sprites/PieceColors/Purple.png")
+		6:
+			texture = load("res://Sprites/PieceColors/White.png")

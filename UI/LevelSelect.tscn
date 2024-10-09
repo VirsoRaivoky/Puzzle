@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://btba6xd01nrll"]
+[gd_scene load_steps=7 format=3 uid="uid://btba6xd01nrll"]
 
 [ext_resource type="Script" path="res://Scripts/LevelButton.gd" id="2_5yh3j"]
+[ext_resource type="Texture2D" uid="uid://u6meppqs7qnc" path="res://Sprites/PieceColors/Ring.png" id="2_rk66x"]
+[ext_resource type="Texture2D" uid="uid://trm8hbwvoix" path="res://Sprites/PieceColors/Blue.png" id="3_rsr0e"]
+[ext_resource type="Texture2D" uid="uid://dq8eyip88g2d3" path="res://Sprites/PieceColors/Turquoise.png" id="4_wicg2"]
+[ext_resource type="Texture2D" uid="uid://bmhbl7q7hwxfa" path="res://Sprites/PieceColors/Green.png" id="5_bxlhu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hu16d"]
+font_size = 25
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,30 +23,30 @@ size_flags_vertical = 4
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 310.0
-offset_top = 120.0
-offset_right = 390.0
-offset_bottom = 200.0
+offset_left = 317.0
+offset_top = 85.0
+offset_right = 397.0
+offset_bottom = 165.0
 text = "1"
 script = ExtResource("2_5yh3j")
 level_index = 1
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 120.0
-offset_right = 490.0
-offset_bottom = 200.0
+offset_left = 417.0
+offset_top = 85.0
+offset_right = 497.0
+offset_bottom = 165.0
 text = "2"
 script = ExtResource("2_5yh3j")
 level_index = 2
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 120.0
-offset_right = 590.0
-offset_bottom = 200.0
+offset_left = 517.0
+offset_top = 85.0
+offset_right = 597.0
+offset_bottom = 165.0
 text = "3
 "
 script = ExtResource("2_5yh3j")
@@ -45,73 +54,220 @@ level_index = 3
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0
-offset_left = 610.0
-offset_top = 120.0
-offset_right = 690.0
-offset_bottom = 200.0
+offset_left = 617.0
+offset_top = 85.0
+offset_right = 697.0
+offset_bottom = 165.0
 text = "4"
 script = ExtResource("2_5yh3j")
 level_index = 4
 
 [node name="Button5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 710.0
-offset_top = 120.0
-offset_right = 790.0
-offset_bottom = 200.0
+offset_left = 717.0
+offset_top = 85.0
+offset_right = 797.0
+offset_bottom = 165.0
 text = "5"
 script = ExtResource("2_5yh3j")
 level_index = 5
 
 [node name="Button6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 310.0
-offset_top = 220.0
-offset_right = 390.0
-offset_bottom = 300.0
+offset_left = 317.0
+offset_top = 285.0
+offset_right = 397.0
+offset_bottom = 365.0
 text = "6"
 script = ExtResource("2_5yh3j")
 level_index = 6
 
 [node name="Button7" type="Button" parent="."]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 220.0
-offset_right = 490.0
-offset_bottom = 300.0
+offset_left = 417.0
+offset_top = 285.0
+offset_right = 497.0
+offset_bottom = 365.0
 text = "7"
 script = ExtResource("2_5yh3j")
 level_index = 7
 
 [node name="Button8" type="Button" parent="."]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 220.0
-offset_right = 590.0
-offset_bottom = 300.0
+offset_left = 517.0
+offset_top = 285.0
+offset_right = 597.0
+offset_bottom = 365.0
 text = "8"
 script = ExtResource("2_5yh3j")
 level_index = 8
 
 [node name="Button9" type="Button" parent="."]
 layout_mode = 0
-offset_left = 610.0
-offset_top = 220.0
-offset_right = 690.0
-offset_bottom = 300.0
+offset_left = 617.0
+offset_top = 285.0
+offset_right = 697.0
+offset_bottom = 365.0
 text = "9"
 script = ExtResource("2_5yh3j")
 level_index = 9
 
 [node name="Button10" type="Button" parent="."]
 layout_mode = 0
-offset_left = 710.0
-offset_top = 220.0
-offset_right = 790.0
-offset_bottom = 300.0
+offset_left = 717.0
+offset_top = 285.0
+offset_right = 797.0
+offset_bottom = 365.0
 text = "10"
 script = ExtResource("2_5yh3j")
 level_index = 10
+
+[node name="Button11" type="Button" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 485.0
+offset_right = 397.0
+offset_bottom = 565.0
+text = "11"
+script = ExtResource("2_5yh3j")
+level_index = 11
+
+[node name="Button12" type="Button" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 485.0
+offset_right = 497.0
+offset_bottom = 565.0
+text = "12"
+script = ExtResource("2_5yh3j")
+level_index = 12
+
+[node name="Button13" type="Button" parent="."]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 485.0
+offset_right = 597.0
+offset_bottom = 565.0
+text = "13"
+script = ExtResource("2_5yh3j")
+level_index = 13
+
+[node name="Button14" type="Button" parent="."]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 485.0
+offset_right = 697.0
+offset_bottom = 565.0
+text = "14"
+script = ExtResource("2_5yh3j")
+level_index = 14
+
+[node name="Button15" type="Button" parent="."]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 485.0
+offset_right = 797.0
+offset_bottom = 565.0
+text = "15"
+script = ExtResource("2_5yh3j")
+level_index = 15
+
+[node name="BlueBG" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 261.0
+offset_top = 65.0
+offset_right = 843.0
+offset_bottom = 188.0
+mouse_filter = 2
+color = Color(0.313726, 0.741176, 0.945098, 1)
+
+[node name="TurquoiseBG" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 260.0
+offset_top = 268.0
+offset_right = 842.0
+offset_bottom = 382.0
+mouse_filter = 2
+color = Color(0.25098, 0.878431, 0.815686, 1)
+
+[node name="GreenBG" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 261.0
+offset_top = 466.0
+offset_right = 843.0
+offset_bottom = 579.0
+mouse_filter = 2
+color = Color(0.345098, 0.733333, 0.517647, 1)
+
+[node name="Ring" type="Sprite2D" parent="."]
+position = Vector2(249, 65)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_rsr0e")
+
+[node name="Ring2" type="Sprite2D" parent="."]
+position = Vector2(249, 251)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring2"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wicg2")
+
+[node name="Ring3" type="Sprite2D" parent="."]
+position = Vector2(249, 452)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring3"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_bxlhu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 48.0
+offset_right = 268.0
+offset_bottom = 83.0
+text = "3x3"
+label_settings = SubResource("LabelSettings_hu16d")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 233.0
+offset_right = 268.0
+offset_bottom = 268.0
+text = "4x4"
+label_settings = SubResource("LabelSettings_hu16d")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 435.0
+offset_right = 268.0
+offset_bottom = 470.0
+text = "5x5"
+label_settings = SubResource("LabelSettings_hu16d")
+
+[node name="BackGround" type="ColorRect" parent="."]
+z_index = -2
+layout_mode = 0
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1152.0
+offset_bottom = 658.0
+mouse_filter = 2
+color = Color(0.223529, 0.537255, 0.556863, 1)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
@@ -123,3 +279,8 @@ level_index = 10
 [connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
 [connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
 [connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]
+[connection signal="pressed" from="Button11" to="Button11" method="_on_pressed"]
+[connection signal="pressed" from="Button12" to="Button12" method="_on_pressed"]
+[connection signal="pressed" from="Button13" to="Button13" method="_on_pressed"]
+[connection signal="pressed" from="Button14" to="Button14" method="_on_pressed"]
+[connection signal="pressed" from="Button15" to="Button15" method="_on_pressed"]

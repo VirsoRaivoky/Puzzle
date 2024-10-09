@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cveqhxji75y0m"]
+[gd_scene load_steps=4 format=3 uid="uid://cveqhxji75y0m"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_bn3uy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mt4j5"]
+font_size = 60
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_605tn"]
+font_size = 30
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,9 +33,8 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -100.0
 offset_right = 150.0
-offset_bottom = -40.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Começar"
@@ -46,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Options"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Quit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -54,13 +63,41 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -15.0
+offset_top = 85.0
 offset_right = 150.0
-offset_bottom = 45.0
+offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Sair do Jogo"
 
+[node name="BackGround" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -576.0
+offset_top = -332.0
+offset_right = 587.0
+offset_bottom = 330.0
+mouse_filter = 2
+color = Color(0.223529, 0.537255, 0.556863, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = -193.0
+offset_top = -199.0
+offset_right = 210.0
+offset_bottom = -116.0
+text = "Magic Pieces"
+label_settings = SubResource("LabelSettings_mt4j5")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -167.0
+offset_right = 226.0
+offset_bottom = -125.0
+text = "0.7"
+label_settings = SubResource("LabelSettings_605tn")
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_3_pressed"]

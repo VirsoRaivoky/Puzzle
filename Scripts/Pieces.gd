@@ -23,3 +23,9 @@ func set_color(color_type):
 		4: 
 			piece_color = 4
 			color.texture = load("res://Sprites/PieceColors/Turquoise.png")
+		5: 
+			piece_color = 5
+			color.texture = load("res://Sprites/PieceColors/Purple.png")
+		6:
+			piece_color = 6
+			color.texture = load("res://Sprites/PieceColors/White.png")

@@ -8,6 +8,7 @@ var right_position: int
 var moves: int 
 var index: int = 0
 
+@export var invalid_positions: Array[int]
 var colors_to_match: Array
 var pieces: Array
 var selectors_list: Array
@@ -134,9 +135,9 @@ func check_movement(value: int)-> bool:
 	@warning_ignore("integer_division")
 	var move_limit: int = (total_size / rows) * (rows - 1) - 1
 	@warning_ignore("integer_division")
-	var invalid_position: int = (total_size / rows) - 1
+	#var invalid_position: int = (total_size / rows) - 1
 	
-	if value < 0 or value == invalid_position:
+	if value < 0 or value in invalid_positions:
 		return false
 	return value < move_limit
 
