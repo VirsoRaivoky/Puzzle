@@ -24,14 +24,15 @@ func _ready():
 
 
 func _process(_delta)-> void:
-	inputs()
+	if !Global.pause_screen.is_paused:
+		inputs()
 	
-	info.text = "Movimentos Restantates: " + str(moves)
+	info.text = " Movimentos:  " + str(moves)
 	
 	if moves <= 0:
 		await get_tree().create_timer(0.4).timeout
 		if check_piece(colors_to_match):
-			Global.level_screen.level_completed.emit()
+			Global.pause_screen.level_completed.emit()
 		else:
 			for i in range(pieces.size()):
 				pieces[i].set_color(Global.get_level_set()[i])

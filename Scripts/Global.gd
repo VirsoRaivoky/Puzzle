@@ -1,72 +1,120 @@
 extends Node
 
 var piece_handler
-var level_screen
+var pause_screen
 
 var level_moves: int
 var level_index: int = 1
 var set_index: int = 0
 var match_colors: Array
 
-var level1_1: Array = [1, 1, 2,
-					   2, 1, 2, 
-					   0, 0, 0]
+var level1_1: Array = [0, 0, 1,
+					   1, 1, 2, 
+					   2, 0, 2]
 					
-var level1_2: Array = [1, 2, 1,
-					   2, 0, 0, 
-					   0, 1, 2]
+var level1_2: Array = [2, 2, 4,
+					   2, 3, 3, 
+					   4, 3, 4]
 					
-var level1_3: Array = [1, 2, 1,
-					   2, 0, 0, 
-					   0, 1, 2]
+var level1_3: Array = [0, 0, 4,
+					   0, 1, 4, 
+					   4, 1, 1]
 					
-var level1_4: Array = [1, 2, 1,
-					   2, 0, 0, 
-					   0, 1, 2]
+var level1_4: Array = [2, 2, 1,
+					   1, 2, 3, 
+					   1, 3, 3]
 					
-var level1_5: Array = [1, 2, 1,
-					   2, 0, 0, 
-					   0, 1, 2]
+var level1_5: Array = [3, 3, 0,
+					   4, 4, 0, 
+					   3, 4, 0]
 
 
-var level2_1: Array = [0, 0, 0, 0, 0,  
-					   1, 1, 1, 1, 1,
-					   2, 2, 2, 2, 2,
-					   3, 3, 3, 3, 3,
-					   4, 4, 4, 4, 4]
+var level2_1: Array = [0, 1, 0, 0,
+					   0, 1, 3, 1,
+					   2, 1, 2, 2,
+					   3, 2, 3, 3]
+					
 
-func load_level(level_i: int, set_i: int):
+var level2_2: Array = [4, 0, 4, 4,
+					   0, 0, 0, 3,
+					   4, 3, 1, 3,
+					   1, 3, 1, 1]
+
+var level2_3: Array = [1, 2, 3, 1,
+					   1, 1, 3, 3,
+					   3, 0, 2, 2,
+					   2, 0, 0, 0]
+
+var level2_4: Array = [2, 4, 2, 2,
+					   4, 4, 4, 3,
+					   2, 3, 3, 1,
+					   1, 3, 1, 1]
+
+var level2_5: Array = [3, 3, 0, 3,
+					   3, 2, 0, 2,
+					   0, 2, 2, 4,
+					   0, 4, 4, 4]
+
+
+func load_level(level_i: int):
 	level_index = level_i
-	set_index = set_i
-	get_tree().change_scene_to_file(Global.get_set())
+	get_level_set()
+	get_tree().change_scene_to_file(get_set())
+
 
 func get_level_set():
 	
 	match level_index:
 		1:
-			level_moves = 1
-			match_colors = [1, 2, 0]
+			level_moves = 2
+			match_colors = [0, 1, 2]
+			set_index = 0
 			return level1_1
 		2:
-			level_moves = 4
-			match_colors = [1, 2, 0]
+			level_moves = 3
+			match_colors = [2, 3, 4]
+			set_index = 0
 			return level1_2
 		3: 
-			level_moves = 5
-			match_colors = [1, 2, 0]
+			level_moves = 4
+			match_colors = [0, 1, 4]
+			set_index = 0
 			return level1_3
 		4:
-			level_moves = 6
-			match_colors = [1, 2, 0]
+			level_moves = 4
+			match_colors = [1, 2, 3]
+			set_index = 0
 			return level1_4
 		5:
-			level_moves = 6
-			match_colors = [1, 2, 0]
+			level_moves = 5
+			match_colors = [3, 4, 0]
+			set_index = 0
 			return level1_5
 		6:
-			level_moves = 1
-			match_colors = [1, 1, 2, 3, 4]
+			level_moves = 3
+			match_colors = [0, 1, 2, 3]
+			set_index = 1
 			return level2_1
+		7:
+			level_moves = 4
+			match_colors = [4, 0, 3, 1]
+			set_index = 1
+			return level2_2
+		8:
+			level_moves = 5
+			match_colors = [1, 3, 2, 0]
+			set_index = 1
+			return level2_3
+		9:
+			level_moves = 5
+			match_colors = [2, 4, 3, 1]
+			set_index = 1
+			return level2_4
+		10:
+			level_moves = 6
+			match_colors = [3, 2, 0, 4]
+			set_index = 1
+			return level2_5
 
 func get_set():
 	match set_index: 

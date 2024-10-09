@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2re3wy3pknvs"
-path="res://.godot/imported/MarkerRing.png-e502bf3586764836d137823803f0b587.ctex"
+uid="uid://dxpgtx2f0lmi0"
+path="res://.godot/imported/MoveCounter.png-98567e6b90fe02166672834a9453db82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/MarkerRing.png"
-dest_files=["res://.godot/imported/MarkerRing.png-e502bf3586764836d137823803f0b587.ctex"]
+source_file="res://Sprites/Background/MoveCounter.png"
+dest_files=["res://.godot/imported/MoveCounter.png-98567e6b90fe02166672834a9453db82.ctex"]
 
 [params]
 
