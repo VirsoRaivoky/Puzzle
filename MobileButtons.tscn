@@ -1,51 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3fihthx507bj"]
+[gd_scene load_steps=3 format=3 uid="uid://c3fihthx507bj"]
 
 [ext_resource type="Texture2D" uid="uid://cj4lbj5cq054u" path="res://Sprites/Selector/Indicator.png" id="1_fxxg2"]
-[ext_resource type="Texture2D" uid="uid://b10reesqcndss" path="res://icon.svg" id="1_ht6ys"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_msb3x"]
-size = Vector2(300, 300)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2awq"]
-size = Vector2(200, 200)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmkve"]
+radius = 60.0
 
 [node name="MobileButtons" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 8.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Up" type="TouchScreenButton" parent="."]
-position = Vector2(178, 338)
-scale = Vector2(0.210938, 0.234375)
-texture_normal = ExtResource("1_fxxg2")
-shape = SubResource("RectangleShape2D_msb3x")
-action = "left"
+position = Vector2(190, 352)
+shape = SubResource("CircleShape2D_vmkve")
+action = "up"
+
+[node name="Sprite2D" type="Sprite2D" parent="Up"]
+position = Vector2(7, 1)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fxxg2")
 
 [node name="Down" type="TouchScreenButton" parent="."]
-position = Vector2(178, 481)
-scale = Vector2(0.210938, 0.234375)
-texture_normal = ExtResource("1_fxxg2")
-shape = SubResource("RectangleShape2D_msb3x")
-action = "left"
+position = Vector2(190, 539)
+shape = SubResource("CircleShape2D_vmkve")
+action = "down"
 
-[node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2(90, 411)
-scale = Vector2(0.210938, 0.234375)
-texture_normal = ExtResource("1_fxxg2")
-shape = SubResource("RectangleShape2D_msb3x")
-action = "left"
+[node name="Sprite2D" type="Sprite2D" parent="Down"]
+position = Vector2(-4, -6)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fxxg2")
 
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2(267, 411)
-scale = Vector2(0.210938, 0.234375)
-texture_normal = ExtResource("1_fxxg2")
-shape = SubResource("RectangleShape2D_msb3x")
+position = Vector2(277, 446)
+shape = SubResource("CircleShape2D_vmkve")
+action = "right"
+
+[node name="Sprite2D" type="Sprite2D" parent="Right"]
+position = Vector2(5, 11)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fxxg2")
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2(100, 446)
+shape = SubResource("CircleShape2D_vmkve")
 action = "left"
 
-[node name="Action" type="TouchScreenButton" parent="."]
-position = Vector2(859, 404)
-texture_normal = ExtResource("1_ht6ys")
-shape = SubResource("RectangleShape2D_d2awq")
+[node name="Sprite2D" type="Sprite2D" parent="Left"]
+position = Vector2(6, -4)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fxxg2")
