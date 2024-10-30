@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://btba6xd01nrll"]
+[gd_scene load_steps=7 format=3 uid="uid://btba6xd01nrll"]
 
-[ext_resource type="Script" path="res://Scripts/UI/LevelButton.gd" id="2_5yh3j"]
+[ext_resource type="Script" path="res://Scripts/LevelButton.gd" id="2_5yh3j"]
+[ext_resource type="Texture2D" uid="uid://u6meppqs7qnc" path="res://Sprites/PieceColors/Ring.png" id="2_rk66x"]
+[ext_resource type="Texture2D" uid="uid://trm8hbwvoix" path="res://Sprites/PieceColors/Blue.png" id="3_rsr0e"]
+[ext_resource type="Texture2D" uid="uid://dq8eyip88g2d3" path="res://Sprites/PieceColors/Turquoise.png" id="4_wicg2"]
+[ext_resource type="Texture2D" uid="uid://bmhbl7q7hwxfa" path="res://Sprites/PieceColors/Green.png" id="5_bxlhu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hu16d"]
+font_size = 25
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -192,6 +201,63 @@ offset_right = 843.0
 offset_bottom = 579.0
 mouse_filter = 2
 color = Color(0.345098, 0.733333, 0.517647, 1)
+
+[node name="Ring" type="Sprite2D" parent="."]
+position = Vector2(249, 65)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_rsr0e")
+
+[node name="Ring2" type="Sprite2D" parent="."]
+position = Vector2(249, 251)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring2"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wicg2")
+
+[node name="Ring3" type="Sprite2D" parent="."]
+position = Vector2(249, 452)
+scale = Vector2(0.769231, 0.746154)
+texture = ExtResource("2_rk66x")
+
+[node name="Blue" type="Sprite2D" parent="Ring3"]
+position = Vector2(-1, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_bxlhu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 48.0
+offset_right = 268.0
+offset_bottom = 83.0
+text = "3x3"
+label_settings = SubResource("LabelSettings_hu16d")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 233.0
+offset_right = 268.0
+offset_bottom = 268.0
+text = "4x4"
+label_settings = SubResource("LabelSettings_hu16d")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 435.0
+offset_right = 268.0
+offset_bottom = 470.0
+text = "5x5"
+label_settings = SubResource("LabelSettings_hu16d")
 
 [node name="BackGround" type="ColorRect" parent="."]
 z_index = -2

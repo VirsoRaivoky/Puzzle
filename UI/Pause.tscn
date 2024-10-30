@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://f042pa335fga"]
+
+[ext_resource type="Script" path="res://Scripts/PauseScreen.gd" id="1_5sf6l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_scvav"]
+font_size = 50
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+z_index = 4
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5sf6l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 372.0
+offset_top = 50.0
+offset_right = 776.0
+offset_bottom = 583.0
+color = Color(0.576471, 0.639216, 0.737255, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 390.0
+offset_top = 72.0
+offset_right = 760.0
+offset_bottom = 561.0
+color = Color(0.415686, 0.482353, 0.584314, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 447.0
+offset_top = 156.0
+offset_right = 608.0
+offset_bottom = 225.0
+label_settings = SubResource("LabelSettings_scvav")
+
+[node name="Retry" type="Button" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 492.2
+offset_top = 322.2
+offset_right = 653.2
+offset_bottom = 381.2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(79, 29)
+text = "Reiniciar"
+
+[node name="NextLevel" type="Button" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 508.2
+offset_top = 449.2
+offset_right = 665.2
+offset_bottom = 509.2
+scale = Vector2(0.8, 0.8)
+text = "Proxímo Nivel"
+
+[node name="LevelSelect" type="Button" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 508.2
+offset_top = 388.2
+offset_right = 665.2
+offset_bottom = 448.2
+scale = Vector2(0.8, 0.8)
+text = "Voltar Para o Menu"
+
+[node name="Continue" type="Button" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 508.2
+offset_top = 449.2
+offset_right = 665.2
+offset_bottom = 509.2
+scale = Vector2(0.8, 0.8)
+text = "Continuar
+"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="LevelSelect" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

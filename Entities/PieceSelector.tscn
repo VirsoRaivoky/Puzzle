@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpug2ssvq36w6"]
+
+[ext_resource type="Script" path="res://Scripts/PieceSelector.gd" id="1_yf4e5"]
+[ext_resource type="Texture2D" uid="uid://douyk7derlba7" path="res://Sprites/Selector/Selector.png" id="2_jhxbr"]
+[ext_resource type="Texture2D" uid="uid://cj4lbj5cq054u" path="res://Sprites/Selector/Indicator.png" id="3_w7amq"]
+
+[node name="PieceSelector" type="Node2D"]
+script = ExtResource("1_yf4e5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.67451)
+z_index = 1
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_jhxbr")
+
+[node name="Indicator" type="Sprite2D" parent="Sprite2D"]
+z_index = 3
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_w7amq")

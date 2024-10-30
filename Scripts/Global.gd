@@ -1,7 +1,6 @@
 extends Node
 
 var piece_handler
-var selector_handler
 var pause_screen
 
 var level_moves: int
