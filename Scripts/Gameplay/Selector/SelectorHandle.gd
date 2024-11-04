@@ -22,7 +22,8 @@ func _physics_process(_delta):
 	pieces_list = piece_handler.pieces
 	actual_index = piece_handler.index
 	bottom_positions = piece_handler.right_position
-	
+	if Input.is_action_just_pressed("action"):
+		rotate_pieces()
 	move_selector()
 
 
@@ -51,7 +52,6 @@ func rotate_pieces():
 	var piece2 = pieces_list[actual_index + 1]
 	var piece3 = pieces_list[actual_index + bottom_positions]
 	var piece4 = pieces_list[actual_index + bottom_positions + 1]
-	
 	
 	var tween = create_tween().set_parallel(true)
 	

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var selector = preload("res://Entities/PieceSelector.tscn")
+@onready var selector = preload("res://Entities/Selector/Selector.tscn")
 @export var info: Label
 
 @export var rows: int 
@@ -25,8 +25,7 @@ func _ready():
 
 
 func _process(_delta)-> void:
-	if !Global.pause_screen.is_paused:
-		inputs()
+	inputs()
 	
 	info.text = " Movimentos:  " + str(moves)
 	

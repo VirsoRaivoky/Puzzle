@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1cmualh233lg"]
+[gd_scene load_steps=11 format=3 uid="uid://c1cmualh233lg"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="1_fr3hd"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Pieces/PieceHandler.gd" id="3_wmgiv"]
 [ext_resource type="FontFile" uid="uid://ddr7xyawloiq7" path="res://Fonts/Cinzel-VariableFont_wght.ttf" id="4_4my77"]
-[ext_resource type="PackedScene" uid="uid://dtgcqoo8fnshn" path="res://Entities/Marker/Marker.tscn" id="4_kbleu"]
-[ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://Entities/Pieces/PieceHandler.tscn" id="6_agays"]
-[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Entities/Pieces/Pieces.tscn" id="7_u7pw0"]
+[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Entities/Pieces/Pieces.tscn" id="4_dp25j"]
+[ext_resource type="PackedScene" uid="uid://dtgcqoo8fnshn" path="res://Marker.tscn" id="4_kbleu"]
+[ext_resource type="PackedScene" uid="uid://n4a1yrjvc2ig" path="res://Entities/PieceHandler.tscn" id="6_agays"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Selector/SelectorHandle.gd" id="6_f821t"]
+[ext_resource type="Texture2D" uid="uid://bmscqiwalj6vd" path="res://Sprites/PieceColors/OuterRing.png" id="9_drlba"]
 [ext_resource type="Texture2D" uid="uid://bia2d1gwylxr8" path="res://Sprites/Background/Tabuleiro3x3.png" id="9_p24j0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bmgrt"]
@@ -16,47 +19,50 @@ script = ExtResource("1_fr3hd")
 info = NodePath("Label")
 
 [node name="PieceHandler" parent="." instance=ExtResource("6_agays")]
-position = Vector2(578, 374)
+position = Vector2(471, 264)
 scale = Vector2(0.8, 0.8)
+script = ExtResource("3_wmgiv")
 rows = 3
 limit = 5
 invalid_positions = Array[int]([2, 5])
 
-[node name="Pieces" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-131.25, -136.25)
+[node name="Pieces" parent="PieceHandler" instance=ExtResource("4_dp25j")]
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces2" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-1.24999, -136.25)
+[node name="Pieces2" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(130, 0)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces3" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(128.75, -136.25)
+[node name="Pieces3" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(260, 0)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces6" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-131.25, -16.25)
+[node name="Pieces4" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(0, 130)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces7" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-1.24999, -16.25)
+[node name="Pieces5" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(130, 130)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces8" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(128.75, -16.25)
+[node name="Pieces6" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(260, 130)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces11" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-131.25, 103.75)
+[node name="Pieces7" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(0, 260)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces12" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(-1.24999, 103.75)
+[node name="Pieces8" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(130, 260)
 scale = Vector2(0.8, 0.8)
 
-[node name="Pieces13" parent="PieceHandler" instance=ExtResource("7_u7pw0")]
-position = Vector2(128.75, 103.75)
+[node name="Pieces9" parent="PieceHandler" instance=ExtResource("4_dp25j")]
+position = Vector2(260, 260)
 scale = Vector2(0.8, 0.8)
+
+[node name="SelectorHandler" type="Node2D" parent="."]
+script = ExtResource("6_f821t")
 
 [node name="Markers" type="Node2D" parent="."]
 position = Vector2(-4, 24)
@@ -95,3 +101,48 @@ offset_right = 391.0
 offset_bottom = 121.0
 text = "Restam: 3"
 label_settings = SubResource("LabelSettings_bmgrt")
+
+[node name="OuterRing" type="Sprite2D" parent="."]
+position = Vector2(471, 259)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing2" type="Sprite2D" parent="."]
+position = Vector2(575, 259)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing3" type="Sprite2D" parent="."]
+position = Vector2(679, 260)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing4" type="Sprite2D" parent="."]
+position = Vector2(471, 363.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing5" type="Sprite2D" parent="."]
+position = Vector2(575, 363.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing6" type="Sprite2D" parent="."]
+position = Vector2(679, 364.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing7" type="Sprite2D" parent="."]
+position = Vector2(471, 467.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing8" type="Sprite2D" parent="."]
+position = Vector2(575, 467.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")
+
+[node name="OuterRing9" type="Sprite2D" parent="."]
+position = Vector2(679, 468.65)
+scale = Vector2(0.35, 0.371)
+texture = ExtResource("9_drlba")

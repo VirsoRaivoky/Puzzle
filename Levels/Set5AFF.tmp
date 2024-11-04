@@ -22,8 +22,8 @@ position = Vector2(569, 354)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("4_y6nks")
 rows = 4
-limit = 11
-invalid_positions = Array[int]([3, 7, 11])
+limit = 10
+invalid_positions = Array[int]([3, 7, 10])
 
 [node name="Pieces" parent="PieceHandler" instance=ExtResource("4_ck0xs")]
 z_index = 1
