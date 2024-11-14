@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxpgtx2f0lmi0"
-path="res://.godot/imported/MoveCounter.png-98567e6b90fe02166672834a9453db82.ctex"
+uid="uid://dbbuhe06xdfmu"
+path="res://.godot/imported/MenuRight.png-c08e10f3e30e8f65dbdba919fc06dffd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/MoveCounter.png"
-dest_files=["res://.godot/imported/MoveCounter.png-98567e6b90fe02166672834a9453db82.ctex"]
+source_file="res://Sprites/Background/MenuRight.png"
+dest_files=["res://.godot/imported/MenuRight.png-c08e10f3e30e8f65dbdba919fc06dffd.ctex"]
 
 [params]
 

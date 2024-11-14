@@ -1,6 +1,5 @@
 extends Node
 
-@onready var selector_handler = preload("res://Entities/Selector/SelectorHandler.tscn")
 @export var info: Label
 
 var moves_left: int
@@ -10,8 +9,6 @@ var moves_left: int
 func _ready():
 	moves_left = Global.level_moves
 	
-	var selec_handler = selector_handler.instantiate()
-	add_child(selec_handler)
 
 
 func _process(delta):

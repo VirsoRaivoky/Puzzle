@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq3soqbedou8w"
-path="res://.godot/imported/RIngUpdate.png-3d27d80c384f6db76dc1fb1efbc6aacc.ctex"
+uid="uid://6rngvreyfqc0"
+path="res://.godot/imported/Arrow.png-2de52d32959d0ed6250b3c08fcd9452b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/PieceColors/RIngUpdate.png"
-dest_files=["res://.godot/imported/RIngUpdate.png-3d27d80c384f6db76dc1fb1efbc6aacc.ctex"]
+source_file="res://Sprites/Selector/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-2de52d32959d0ed6250b3c08fcd9452b.ctex"]
 
 [params]
 

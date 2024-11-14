@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cveqhxji75y0m"]
+[gd_scene load_steps=9 format=3 uid="uid://cveqhxji75y0m"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Menu.gd" id="1_bn3uy"]
 [ext_resource type="FontFile" uid="uid://ddr7xyawloiq7" path="res://Fonts/Cinzel-VariableFont_wght.ttf" id="2_5i838"]
 [ext_resource type="Texture2D" uid="uid://dhwnq28gpnpxo" path="res://Sprites/Background/Button.png" id="3_bn7hw"]
+[ext_resource type="Texture2D" uid="uid://d1tbr0ilsod1r" path="res://Sprites/Background/MenuLeft.png" id="4_p61hg"]
+[ext_resource type="Texture2D" uid="uid://dbbuhe06xdfmu" path="res://Sprites/Background/MenuRight.png" id="5_1xiep"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_p0drl"]
 font = ExtResource("2_5i838")
@@ -19,11 +21,6 @@ font_size = 60
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_605tn"]
-font_size = 30
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -38,6 +35,7 @@ size_flags_stretch_ratio = 1.86
 script = ExtResource("1_bn3uy")
 
 [node name="Start" type="Button" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -67,15 +65,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Quit" type="Button" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.0
+offset_left = -219.0
 offset_top = 79.0
-offset_right = 197.0
+offset_right = 198.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -112,15 +111,13 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Options"
 
-[node name="BackGround" type="ColorRect" parent="."]
-z_index = -2
-layout_mode = 0
-offset_left = -576.0
-offset_top = -332.0
-offset_right = 587.0
-offset_bottom = 330.0
-mouse_filter = 2
-color = Color(0.137255, 0.533333, 0.568627, 1)
+[node name="MenuLeft" type="Sprite2D" parent="."]
+position = Vector2(-277, 0)
+texture = ExtResource("4_p61hg")
+
+[node name="MenuRight" type="Sprite2D" parent="."]
+position = Vector2(287, 0)
+texture = ExtResource("5_1xiep")
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
@@ -132,14 +129,11 @@ offset_bottom = -116.0
 text = "Magic Pieces"
 label_settings = SubResource("LabelSettings_mt4j5")
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 215.0
-offset_top = -151.0
-offset_right = 257.0
-offset_bottom = -109.0
-text = "0.7"
-label_settings = SubResource("LabelSettings_605tn")
+[node name="LeftPos" type="Node2D" parent="."]
+position = Vector2(-576, -30)
+
+[node name="RightPost" type="Node2D" parent="."]
+position = Vector2(576, -30)
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_button_3_pressed"]

@@ -1,9 +1,11 @@
-extends Sprite2D
+extends Node2D
 
 @export var color_type: int
+var marker_color: Sprite2D 
 
 func _ready():
-	scale = Vector2(0.1, 0.1)
+	marker_color = get_node("MarkerColor")
+	marker_color.scale = Vector2(0.25, 0.4)
 	set_color(Global.match_colors[color_type])
 
 
@@ -11,16 +13,16 @@ func set_color(color: int):
 	
 	match color:
 		0:
-			texture = load("res://Sprites/PieceColors/Blue.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Blue.png")
 		1:
-			texture = load("res://Sprites/PieceColors/Green.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Green.png")
 		2:
-			texture = load("res://Sprites/PieceColors/Red.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Red.png")
 		3:
-			texture = load("res://Sprites/PieceColors/Orange.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Orange.png")
 		4: 
-			texture = load("res://Sprites/PieceColors/Turquoise.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Turquoise.png")
 		5: 
-			texture = load("res://Sprites/PieceColors/Purple.png")
+			marker_color.texture = load("res://Sprites/PieceColors/Purple.png")
 		6:
-			texture = load("res://Sprites/PieceColors/White.png")
+			marker_color.texture = load("res://Sprites/PieceColors/White.png")

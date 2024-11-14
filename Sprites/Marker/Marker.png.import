@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci5ernyn02oq7"
-path="res://.godot/imported/Table.png-c63a4bae9a1b431894ba4ce4127b647e.ctex"
+uid="uid://crfqr6rq53hcf"
+path="res://.godot/imported/Marker.png-659cd6fa5740f75386a2d00dcae82f91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Table.png"
-dest_files=["res://.godot/imported/Table.png-c63a4bae9a1b431894ba4ce4127b647e.ctex"]
+source_file="res://Sprites/Marker/Marker.png"
+dest_files=["res://.godot/imported/Marker.png-659cd6fa5740f75386a2d00dcae82f91.ctex"]
 
 [params]
 
