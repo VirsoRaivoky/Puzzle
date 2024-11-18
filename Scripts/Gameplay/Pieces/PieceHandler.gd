@@ -11,12 +11,14 @@ var is_moving: bool = false
 @export var invalid_positions: Array[int]
 var colors_to_match: Array
 var pieces: Array
+var pieces_is_ready: bool = false
+
 
 func _ready():
 	Global.piece_handler = self
 	swap_mode = 1
 	setup_game()
-
+	
 
 func _physics_process(_delta):
 	inputs()
@@ -34,6 +36,8 @@ func setup_game():
 	
 	for i in range(min(pieces.size(), current_level.size())):
 		pieces[i].set_color(current_level[i])
+	
+	pieces_is_ready = true
 
 
 func inputs(): 

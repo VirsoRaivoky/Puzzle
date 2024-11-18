@@ -4,7 +4,6 @@ extends Node
 
 var moves_left: int
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	moves_left = Global.level_moves

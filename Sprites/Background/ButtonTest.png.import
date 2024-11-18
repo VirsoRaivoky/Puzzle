@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbbuhe06xdfmu"
-path="res://.godot/imported/MenuRight.png-c08e10f3e30e8f65dbdba919fc06dffd.ctex"
+uid="uid://c10ih574xkqye"
+path="res://.godot/imported/ButtonTest.png-fbe2ec0b58a966abbf6d6fd3d3e40b39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/MenuRight.png"
-dest_files=["res://.godot/imported/MenuRight.png-c08e10f3e30e8f65dbdba919fc06dffd.ctex"]
+source_file="res://Sprites/Background/ButtonTest.png"
+dest_files=["res://.godot/imported/ButtonTest.png-fbe2ec0b58a966abbf6d6fd3d3e40b39.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
