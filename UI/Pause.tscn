@@ -1,7 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://f042pa335fga"]
+[gd_scene load_steps=10 format=3 uid="uid://f042pa335fga"]
 
-[ext_resource type="Texture2D" uid="uid://c1y4ne4yya2m" path="res://Sprites/Background/PauseScreen.png" id="1_5n0pi"]
-[ext_resource type="Texture2D" uid="uid://dhwnq28gpnpxo" path="res://Sprites/Background/Button.png" id="2_2bwc7"]
+[ext_resource type="Texture2D" uid="uid://d4md1fl7f05hf" path="res://Sprites/Background/FundoUpdate.png" id="1_m35as"]
+[ext_resource type="Texture2D" uid="uid://bjo8pwnrg1ei" path="res://Sprites/Background/ButtonRework.png" id="2_cyik5"]
+[ext_resource type="FontFile" uid="uid://cp82b0ynqncou" path="res://Sprites/Background/Cinzel-VariableFont_wght.ttf" id="3_nklpb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdd7l"]
+texture = ExtResource("2_cyik5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3wxw"]
+texture = ExtResource("2_cyik5")
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6i1lq"]
+texture = ExtResource("2_cyik5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gq0ae"]
+texture = ExtResource("2_cyik5")
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5p355"]
+texture = ExtResource("2_cyik5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6kn0w"]
+font_size = 60
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,7 +55,8 @@ offset_right = 245.0
 offset_bottom = 281.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_5n0pi")
+texture = ExtResource("1_m35as")
+expand_mode = 2
 
 [node name="Button" type="Button" parent="TextureRect"]
 layout_mode = 1
@@ -35,14 +65,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.5
-offset_top = -5.0
-offset_right = 139.5
-offset_bottom = 93.0
+offset_left = -190.5
+offset_top = -67.0
+offset_right = 190.5
+offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_2bwc7")
-flat = true
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_vdd7l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v3wxw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6i1lq")
+text = "Continue"
 icon_alignment = 1
 expand_icon = true
 
@@ -53,13 +88,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.5
-offset_top = 112.0
-offset_right = 139.5
-offset_bottom = 210.0
+offset_left = -191.0
+offset_top = 74.0
+offset_right = 188.0
+offset_bottom = 207.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_2bwc7")
-flat = true
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_nklpb")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_vdd7l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gq0ae")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5p355")
+text = "Quit to Menu
+"
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 87.0
+offset_right = 415.0
+offset_bottom = 169.0
+text = "Paused
+"
+label_settings = SubResource("LabelSettings_6kn0w")

@@ -5,8 +5,8 @@ extends Node
 
 var actual_index: int
 var pieces_list: Array
+var is_ready: bool = false
 var selector_instance
-
 
 func _ready():
 	spawn_selectors()
@@ -17,8 +17,9 @@ func _physics_process(_delta):
 	pieces_list = piece_handler.pieces
 	actual_index = piece_handler.index
 	
-	if Global.piece_handler.pieces_is_ready:
+	if is_ready:
 		selector_instance.global_position = pieces_list[0].global_position
+		is_ready = false
 		
 	if !Global.piece_handler.is_moving:
 		move_selector()
@@ -27,7 +28,6 @@ func _physics_process(_delta):
 func spawn_selectors():
 	selector_instance = selector.instantiate()
 	add_child(selector_instance)
-	
 
 
 func move_selector():
@@ -37,6 +37,9 @@ func move_selector():
 	selector_tween.tween_property(selector_instance, "global_position", next_position, 0.1)
 	
 	await selector_tween.finished
-	selector_tween.kill()
+	if selector_tween.finished:
+		selector_tween.kill()
 
 
+func _on_piece_handler_spawn_selector():
+	is_ready = true

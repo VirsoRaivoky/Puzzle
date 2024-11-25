@@ -2,21 +2,19 @@ extends Node2D
 
 @export var rows: int 
 @export var limit: int
+@export var invalid_positions: Array[int]
+
 var swap_mode: int
 var right_position: int
 var index: int = 0
-
-var is_moving: bool = false
-
-@export var invalid_positions: Array[int]
 var colors_to_match: Array
 var pieces: Array
-var pieces_is_ready: bool = false
+var is_moving: bool = false
 
+signal spawn_selector
 
 func _ready():
 	Global.piece_handler = self
-	swap_mode = 1
 	setup_game()
 	
 
@@ -29,15 +27,16 @@ func _physics_process(_delta):
 func setup_game():
 	pieces = get_children()
 	
-	var current_level = Global.get_level_set()
+	var current_level: Array = Global.level_set
 	colors_to_match = Global.match_colors
+	swap_mode = Global.swap_mode
 	
 	right_position = pieces.size() / rows
 	
 	for i in range(min(pieces.size(), current_level.size())):
 		pieces[i].set_color(current_level[i])
 	
-	pieces_is_ready = true
+	spawn_selector.emit()
 
 
 func inputs(): 
@@ -80,8 +79,9 @@ func swap_pieces(mode: int):
 			pieces_to_swap = cross
 			
 		
-	var tween = create_tween().set_parallel(true)
 	is_moving = true
+	var tween = create_tween().set_parallel(true)
+	
 	for i in range(min(piece_to_move.size(), pieces_to_swap.size())):
 		tween.tween_property(piece_to_move[i], 'global_position', pieces_to_swap[i].global_position, 0.1)
 	
@@ -89,8 +89,8 @@ func swap_pieces(mode: int):
 
 	await tween.finished
 	if tween.finished:
-		is_moving = false
 		tween.kill()
+	is_moving = false
 
 
 func swap_piece_index(swap_index: Array):
@@ -101,7 +101,6 @@ func swap_piece_index(swap_index: Array):
 	pieces[index + 1] = swap_index[1] 
 	pieces[index + right_position] = swap_index[2]
 	pieces[index + right_position + 1] = swap_index[3]
-	print(swap_index)
 
 
 func check_movement(value: int):
