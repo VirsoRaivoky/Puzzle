@@ -1,66 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://56i50l0ovwbr"]
+[gd_scene load_steps=6 format=3 uid="uid://56i50l0ovwbr"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="1_fr3hd"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Pieces/PieceHandler.gd" id="1_mrfb3"]
-[ext_resource type="PackedScene" uid="uid://cr43mahmlv3eh" path="res://Entities/Pieces/Pieces.tscn" id="2_enoe3"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Selector/SelectorHandle.gd" id="3_gmcog"]
 [ext_resource type="Texture2D" uid="uid://bia2d1gwylxr8" path="res://Sprites/Background/Tabuleiro3x3.png" id="4_ylcb1"]
 [ext_resource type="PackedScene" uid="uid://dtgcqoo8fnshn" path="res://Entities/Marker/Marker.tscn" id="5_kanhw"]
 
 [node name="Set3x3" type="Node2D" node_paths=PackedStringArray("info")]
 script = ExtResource("1_fr3hd")
-info = NodePath("MoveCounter")
+info = NodePath("Background/MoveCounter")
 
 [node name="PieceHandler" type="Node2D" parent="."]
-position = Vector2(454, 244)
+position = Vector2(385, 247)
 script = ExtResource("1_mrfb3")
 rows = 3
-limit = 5
-invalid_positions = Array[int]([2, 5])
-
-[node name="Pieces" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces2" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(120, 0)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces3" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(240, 0)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces4" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(0, 120)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces5" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(120, 120)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces6" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(240, 120)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces7" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(0, 240)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces8" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(120, 240)
-scale = Vector2(0.7, 0.7)
-
-[node name="Pieces9" parent="PieceHandler" instance=ExtResource("2_enoe3")]
-z_index = 1
-position = Vector2(240, 240)
-scale = Vector2(0.7, 0.7)
+limit = 7
+invalid_positions = Array[int]([3, 7])
 
 [node name="SelectorHandler" type="Node2D" parent="."]
 script = ExtResource("3_gmcog")
@@ -69,41 +24,42 @@ script = ExtResource("3_gmcog")
 position = Vector2(454, 244)
 
 [node name="Marker" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(-100, 0)
+position = Vector2(-172, 0)
 rotation = -1.5708
 
 [node name="Marker2" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(-100, 120)
+position = Vector2(-172, 120)
 rotation = -1.5708
 color_type = 1
 
 [node name="Marker3" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(-100, 240)
+position = Vector2(-172, 240)
 rotation = -1.5708
 color_type = 2
 
 [node name="Marker4" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(340, 0)
+position = Vector2(423, 0)
 rotation = 1.5708
 
 [node name="Marker5" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(340, 120)
+position = Vector2(423, 120)
 rotation = 1.5708
 color_type = 1
 
 [node name="Marker6" parent="MarkerHandler" instance=ExtResource("5_kanhw")]
-position = Vector2(340, 240)
+position = Vector2(423, 240)
 rotation = 1.5708
 color_type = 2
 
-[node name="MoveCounter" type="Label" parent="."]
-offset_left = 576.0
-offset_top = 324.0
-offset_right = 616.0
-offset_bottom = 346.0
-
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(576, 324)
 texture = ExtResource("4_ylcb1")
+
+[node name="MoveCounter" type="Label" parent="Background"]
+offset_left = -373.0
+offset_top = -250.0
+offset_right = -164.0
+offset_bottom = -202.0
 
 [connection signal="spawn_selector" from="PieceHandler" to="SelectorHandler" method="_on_piece_handler_spawn_selector"]

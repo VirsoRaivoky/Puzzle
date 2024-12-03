@@ -1,32 +1,43 @@
 extends Node2D
 
+signal spawn_selector
+
 @export var rows: int 
 @export var limit: int
 @export var invalid_positions: Array[int]
 
+var columns: int = 4
+var index: int = 0
 var swap_mode: int
 var right_position: int
-var index: int = 0
+
 var colors_to_match: Array
 var pieces: Array
 var is_moving: bool = false
 
-signal spawn_selector
+@onready var piece_instance = preload("res://Entities/Pieces/Pieces.tscn")
 
 func _ready():
 	Global.piece_handler = self
 	setup_game()
-	
+	index = 1
 
 func _physics_process(_delta):
 	inputs()
-	if check_rows(colors_to_match):
-		print("foi")
+	
 
 
 func setup_game():
-	pieces = get_children()
 	
+	for r in rows:
+		for c in columns:
+			var piece = piece_instance.instantiate()
+			piece.position = Vector2(c * 120 , r * 120)
+			piece.scale = Vector2(0.7, 0.7)
+			add_child(piece)
+			
+			pieces.append(piece)
+
 	var current_level: Array = Global.level_set
 	colors_to_match = Global.match_colors
 	swap_mode = Global.swap_mode
@@ -51,7 +62,7 @@ func inputs():
 
 	if Input.is_action_just_pressed("down"):
 		check_movement(right_position)
-	
+
 	if Input.is_action_just_pressed("action"):
 		swap_pieces(swap_mode)
 
@@ -104,7 +115,7 @@ func swap_piece_index(swap_index: Array):
 
 
 func check_movement(value: int):
-	var inv_pos: int = rows - 2
+	var inv_pos: int = columns - 2
 	
 	if value > 1 or value < -1:
 		if index + value > limit:
@@ -122,17 +133,4 @@ func check_movement(value: int):
 		return
 	index += value
 
-
-func check_rows(colors_match: Array) -> bool:
-	for r in rows:
-		@warning_ignore("integer_division")
-		var set_size = pieces.size() / rows
-		var initial = set_size * r
-		var final = set_size * (r+1)
-		var sliced = pieces.slice(initial, final)
-		
-		for s in sliced:
-			if s.piece_color != colors_match[r]:
-				return false
-	return true
 

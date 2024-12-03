@@ -26,9 +26,8 @@ flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
 level_set = Array[int]([1, 1, 2, 2, 2, 0, 0, 1, 0])
-match_colors = [2, 1, 0]
-swap_mode = 2
-level_moves = 3
+match_colors = Array[int]([1, 2, 0])
+level_moves = 2
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
