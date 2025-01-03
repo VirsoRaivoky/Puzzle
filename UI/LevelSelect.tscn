@@ -14,229 +14,142 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="."]
+[node name="L1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 85.0
-offset_right = 397.0
-offset_bottom = 165.0
+offset_left = 342.0
+offset_top = 208.0
+offset_right = 422.0
+offset_bottom = 288.0
 text = "1"
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
-level_set = Array[int]([1, 1, 2, 2, 2, 0, 0, 1, 0])
-match_colors = Array[int]([1, 2, 0])
+rows = 3
+columns = 3
 level_moves = 2
+level_set = Array[int]([2, 1, 2, 2, 1, 0, 0, 1, 0])
+match_colors = Array[int]([1, 2, 0])
+x_cord = 2.0
+y_cord = 1.0
 
-[node name="Button2" type="Button" parent="."]
+[node name="L23" type="Button" parent="."]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 85.0
-offset_right = 497.0
-offset_bottom = 165.0
-text = "2"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 517.0
-offset_top = 85.0
-offset_right = 597.0
-offset_bottom = 165.0
+offset_left = 388.0
+offset_top = 289.0
+offset_right = 468.0
+offset_bottom = 369.0
 text = "3
 "
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
+rows = 3
+columns = 3
+level_moves = 3
+level_set = Array[int]([2, 0, 5, 5, 2, 2, 5, 0, 0])
+match_colors = Array[int]([5, 2, 0])
+x_cord = 2.0
+y_cord = 1.0
 
-[node name="Button4" type="Button" parent="."]
+[node name="L3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 617.0
-offset_top = 85.0
-offset_right = 697.0
-offset_bottom = 165.0
+offset_left = 542.0
+offset_top = 208.0
+offset_right = 622.0
+offset_bottom = 288.0
+text = "3
+"
+icon = ExtResource("1_oenhi")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_5yh3j")
+rows = 3
+columns = 3
+level_moves = 3
+level_set = Array[int]([5, 1, 5, 1, 1, 4, 5, 4, 4])
+match_colors = Array[int]([5, 1, 4])
+x_cord = 2.0
+y_cord = 1.0
+
+[node name="L4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 288.0
+offset_right = 572.0
+offset_bottom = 368.0
 text = "4"
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
+rows = 3
+columns = 3
+level_moves = 4
+level_set = Array[int]([6, 4, 3, 6, 4, 4, 3, 6, 3])
+match_colors = Array[int]([6, 4, 3])
+x_cord = 2.0
+y_cord = 1.0
 
-[node name="Button5" type="Button" parent="."]
+[node name="L2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 717.0
-offset_top = 85.0
-offset_right = 797.0
-offset_bottom = 165.0
-text = "5"
+offset_left = 442.0
+offset_top = 208.0
+offset_right = 522.0
+offset_bottom = 288.0
+text = "2
+"
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
+rows = 3
+columns = 3
+level_moves = 2
+level_set = Array[int]([4, 4, 5, 5, 4, 3, 5, 3, 3])
+match_colors = Array[int]([4, 5, 3])
+x_cord = 2.0
+y_cord = 1.0
 
-[node name="Button6" type="Button" parent="."]
+[node name="L6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 285.0
-offset_right = 397.0
-offset_bottom = 365.0
-text = "6"
+offset_left = 642.0
+offset_top = 208.0
+offset_right = 722.0
+offset_bottom = 288.0
+text = "2"
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
+rows = 3
+columns = 3
+level_moves = 3
+level_set = Array[int]([3, 2, 3, 2, 2, 1, 3, 1, 1])
+match_colors = Array[int]([3, 2, 1])
+x_cord = 2.0
+y_cord = 1.0
 
-[node name="Button7" type="Button" parent="."]
+[node name="L7" type="Button" parent="."]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 285.0
-offset_right = 497.0
-offset_bottom = 365.0
-text = "7"
+offset_left = 592.0
+offset_top = 288.0
+offset_right = 672.0
+offset_bottom = 368.0
+text = "3
+"
 icon = ExtResource("1_oenhi")
 flat = true
 icon_alignment = 1
 script = ExtResource("2_5yh3j")
-
-[node name="Button8" type="Button" parent="."]
-layout_mode = 0
-offset_left = 517.0
-offset_top = 285.0
-offset_right = 597.0
-offset_bottom = 365.0
-text = "8"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button9" type="Button" parent="."]
-layout_mode = 0
-offset_left = 617.0
-offset_top = 285.0
-offset_right = 697.0
-offset_bottom = 365.0
-text = "9"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button10" type="Button" parent="."]
-layout_mode = 0
-offset_left = 717.0
-offset_top = 285.0
-offset_right = 797.0
-offset_bottom = 365.0
-text = "10"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button11" type="Button" parent="."]
-layout_mode = 0
-offset_left = 317.0
-offset_top = 485.0
-offset_right = 397.0
-offset_bottom = 565.0
-text = "11"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button12" type="Button" parent="."]
-layout_mode = 0
-offset_left = 417.0
-offset_top = 485.0
-offset_right = 497.0
-offset_bottom = 565.0
-text = "12"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button13" type="Button" parent="."]
-layout_mode = 0
-offset_left = 517.0
-offset_top = 485.0
-offset_right = 597.0
-offset_bottom = 565.0
-text = "13"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button14" type="Button" parent="."]
-layout_mode = 0
-offset_left = 617.0
-offset_top = 485.0
-offset_right = 697.0
-offset_bottom = 565.0
-text = "14"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="Button15" type="Button" parent="."]
-layout_mode = 0
-offset_left = 717.0
-offset_top = 485.0
-offset_right = 797.0
-offset_bottom = 565.0
-text = "15"
-icon = ExtResource("1_oenhi")
-flat = true
-icon_alignment = 1
-script = ExtResource("2_5yh3j")
-
-[node name="BlueBG" type="ColorRect" parent="."]
-z_index = -1
-layout_mode = 0
-offset_left = 261.0
-offset_top = 65.0
-offset_right = 843.0
-offset_bottom = 188.0
-mouse_filter = 2
-color = Color(0.313726, 0.741176, 0.945098, 1)
-
-[node name="TurquoiseBG" type="ColorRect" parent="."]
-z_index = -1
-layout_mode = 0
-offset_left = 260.0
-offset_top = 268.0
-offset_right = 842.0
-offset_bottom = 382.0
-mouse_filter = 2
-color = Color(0.25098, 0.878431, 0.815686, 1)
-
-[node name="GreenBG" type="ColorRect" parent="."]
-z_index = -1
-layout_mode = 0
-offset_left = 261.0
-offset_top = 466.0
-offset_right = 843.0
-offset_bottom = 579.0
-mouse_filter = 2
-color = Color(0.345098, 0.733333, 0.517647, 1)
-
-[node name="BackGround" type="ColorRect" parent="."]
-z_index = -2
-layout_mode = 0
-offset_left = -8.0
-offset_top = -11.0
-offset_right = 1152.0
-offset_bottom = 658.0
-mouse_filter = 2
-color = Color(0.223529, 0.537255, 0.556863, 1)
+rows = 3
+columns = 3
+level_moves = 4
+level_set = Array[int]([6, 2, 6, 4, 2, 4, 6, 4, 2])
+match_colors = Array[int]([6, 2, 4])
+x_cord = 2.0
+y_cord = 1.0
 
 [node name="FundoUpdate" type="Sprite2D" parent="."]
 z_index = -1
@@ -244,18 +157,10 @@ position = Vector2(535, 324)
 scale = Vector2(0.544067, 0.391021)
 texture = ExtResource("3_wk32g")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
-[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
-[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
-[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
-[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
-[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
-[connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
-[connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]
-[connection signal="pressed" from="Button11" to="Button11" method="_on_pressed"]
-[connection signal="pressed" from="Button12" to="Button12" method="_on_pressed"]
-[connection signal="pressed" from="Button13" to="Button13" method="_on_pressed"]
-[connection signal="pressed" from="Button14" to="Button14" method="_on_pressed"]
-[connection signal="pressed" from="Button15" to="Button15" method="_on_pressed"]
+[connection signal="pressed" from="L1" to="L1" method="_on_pressed"]
+[connection signal="pressed" from="L23" to="L23" method="_on_pressed"]
+[connection signal="pressed" from="L3" to="L3" method="_on_pressed"]
+[connection signal="pressed" from="L4" to="L4" method="_on_pressed"]
+[connection signal="pressed" from="L2" to="L2" method="_on_pressed"]
+[connection signal="pressed" from="L6" to="L6" method="_on_pressed"]
+[connection signal="pressed" from="L7" to="L7" method="_on_pressed"]

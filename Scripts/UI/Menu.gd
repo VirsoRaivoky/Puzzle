@@ -10,13 +10,13 @@ extends Control
 
 
 func _on_start_pressed():
-	#get_tree().change_scene_to_file("res://UI/LevelSelect.tscn")
 	move_menu_background()
 	fade_menu()
 
 func _on_quit_pressed():
 	get_tree().quit()
 
+ 
 func move_menu_background():
 	var move_bg = create_tween().set_parallel(true).bind_node(self).set_trans(Tween.TRANS_SINE)
 	
@@ -28,6 +28,7 @@ func move_menu_background():
 	
 	await move_bg.finished
 	move_bg.kill()
+	get_tree().change_scene_to_file("res://UI/LevelSelect.tscn")
 
 
 func fade_menu():

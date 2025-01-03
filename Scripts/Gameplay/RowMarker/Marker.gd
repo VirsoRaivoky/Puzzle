@@ -26,3 +26,5 @@ func set_color(color: int):
 			marker_color.texture = load("res://Sprites/PieceColors/Purple.png")
 		6:
 			marker_color.texture = load("res://Sprites/PieceColors/White.png")
+		_:
+			return

@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://c54fq3ew774f"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Debug.gd" id="1_dsrib"]
+
+[node name="Debug" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dsrib")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 173.0
+offset_right = 156.0
+offset_bottom = 207.0
+text = "Confirm"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 40.0
+offset_bottom = 33.0
+text = "Row"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 51.0
+offset_right = 71.0
+offset_bottom = 73.0
+text = "Column
+"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 71.0
+offset_bottom = 110.0
+text = "X_cord"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_top = 127.0
+offset_right = 71.0
+offset_bottom = 149.0
+text = "Y_cord"
+
+[node name="Row" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 11.0
+offset_right = 162.563
+offset_bottom = 41.0
+
+[node name="Column" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 51.0
+offset_right = 163.563
+offset_bottom = 81.0
+
+[node name="XCord" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 88.0
+offset_right = 163.563
+offset_bottom = 118.0
+step = 0.5
+
+[node name="YCord" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 127.0
+offset_right = 163.563
+offset_bottom = 157.0
+step = 0.5
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,297 @@
+[gd_scene load_steps=7 format=3 uid="uid://56i50l0ovwbr"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="1_fr3hd"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Pieces/PieceHandler.gd" id="1_mrfb3"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Selector/SelectorHandle.gd" id="3_gmcog"]
+[ext_resource type="Texture2D" uid="uid://bia2d1gwylxr8" path="res://Sprites/Background/Tabuleiro3x3.png" id="4_ylcb1"]
+[ext_resource type="PackedScene" uid="uid://c54fq3ew774f" path="res://UI/Debug.tscn" id="5_su1as"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmpyi"]
+radius = 19.105
+
+[node name="Set3x3" type="Node2D" node_paths=PackedStringArray("info")]
+script = ExtResource("1_fr3hd")
+info = NodePath("MoveCounter")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Node2D"]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(335.5, 195.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D"]
+position = Vector2(455.5, 195.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D2"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D3" type="Marker2D" parent="Node2D"]
+position = Vector2(576, 195.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D3"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D4" type="Marker2D" parent="Node2D"]
+position = Vector2(335.5, 315.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D4"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D5" type="Marker2D" parent="Node2D"]
+position = Vector2(455.5, 315.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D5"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D6" type="Marker2D" parent="Node2D"]
+position = Vector2(576, 315.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D6"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.917647, 0, 0.709804, 0.419608)
+
+[node name="Marker2D7" type="Marker2D" parent="Node2D"]
+position = Vector2(335.5, 435.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D7"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D8" type="Marker2D" parent="Node2D"]
+position = Vector2(455.5, 435.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D8"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D9" type="Marker2D" parent="Node2D"]
+position = Vector2(576, 435.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D9"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D10" type="Marker2D" parent="Node2D"]
+position = Vector2(696, 195.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D10"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D11" type="Marker2D" parent="Node2D"]
+position = Vector2(696, 315.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D11"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D12" type="Marker2D" parent="Node2D"]
+position = Vector2(696, 435.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D12"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D13" type="Marker2D" parent="Node2D"]
+position = Vector2(335.5, 75.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D13"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D14" type="Marker2D" parent="Node2D"]
+position = Vector2(455.5, 75.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D14"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D15" type="Marker2D" parent="Node2D"]
+position = Vector2(576, 75.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D15"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.372549, 0.478431, 1, 0.419608)
+
+[node name="Marker2D16" type="Marker2D" parent="Node2D"]
+position = Vector2(696, 555.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D16"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D17" type="Marker2D" parent="Node2D"]
+position = Vector2(816, 555.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D17"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D18" type="Marker2D" parent="Node2D"]
+position = Vector2(936, 555.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D18"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.941176, 0, 0, 0.419608)
+
+[node name="Marker2D19" type="Marker2D" parent="Node2D"]
+position = Vector2(335.5, 555.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D19"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D31" type="Marker2D" parent="Node2D"]
+position = Vector2(215.5, 195.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D31"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D32" type="Marker2D" parent="Node2D"]
+position = Vector2(215.5, 315.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D32"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.352941, 0.482353, 1, 0.419608)
+
+[node name="Marker2D33" type="Marker2D" parent="Node2D"]
+position = Vector2(215.5, 435.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D33"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D34" type="Marker2D" parent="Node2D"]
+position = Vector2(215.5, 75.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D34"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.941176, 0, 0, 0.419608)
+
+[node name="Marker2D35" type="Marker2D" parent="Node2D"]
+position = Vector2(215.5, 555.5)
+gizmo_extents = 62.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D35"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.941176, 0, 0, 0.419608)
+
+[node name="Marker2D20" type="Marker2D" parent="Node2D"]
+position = Vector2(455.5, 555.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D20"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D21" type="Marker2D" parent="Node2D"]
+position = Vector2(576, 555.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D21"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.352941, 0.482353, 1, 0.419608)
+
+[node name="Marker2D22" type="Marker2D" parent="Node2D"]
+position = Vector2(816, 195.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D22"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D25" type="Marker2D" parent="Node2D"]
+position = Vector2(696, 75.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D25"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D26" type="Marker2D" parent="Node2D"]
+position = Vector2(816, 75.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D26"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D23" type="Marker2D" parent="Node2D"]
+position = Vector2(816, 315.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D23"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D24" type="Marker2D" parent="Node2D"]
+position = Vector2(816, 435.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D24"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D27" type="Marker2D" parent="Node2D"]
+position = Vector2(936, 195.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D27"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="Marker2D28" type="Marker2D" parent="Node2D"]
+position = Vector2(936, 75.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D28"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.941176, 0, 0, 0.419608)
+
+[node name="Marker2D29" type="Marker2D" parent="Node2D"]
+position = Vector2(936, 315.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D29"]
+shape = SubResource("CircleShape2D_vmpyi")
+debug_color = Color(0.352941, 0.482353, 1, 0.419608)
+
+[node name="Marker2D30" type="Marker2D" parent="Node2D"]
+position = Vector2(936, 435.5)
+gizmo_extents = 45.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Marker2D30"]
+shape = SubResource("CircleShape2D_vmpyi")
+
+[node name="PieceHandler" type="Node2D" parent="."]
+position = Vector2(351, 106)
+script = ExtResource("1_mrfb3")
+
+[node name="SelectorHandler" type="Node2D" parent="."]
+script = ExtResource("3_gmcog")
+
+[node name="MoveCounter" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 74.0
+offset_right = 412.0
+offset_bottom = 122.0
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+texture = ExtResource("4_ylcb1")
+
+[node name="Debug" parent="." instance=ExtResource("5_su1as")]
+offset_left = 12.0
+offset_top = 1.0
+offset_right = 12.0
+offset_bottom = 1.0
+
+[connection signal="spawn_selector" from="PieceHandler" to="SelectorHandler" method="_on_piece_handler_spawn_selector"]

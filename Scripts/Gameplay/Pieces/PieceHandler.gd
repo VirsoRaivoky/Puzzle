@@ -2,34 +2,58 @@ extends Node2D
 
 signal spawn_selector
 
-@export var rows: int 
-@export var limit: int
-@export var invalid_positions: Array[int]
-
-var columns: int = 4
+var limit: int
+var columns: int
+var rows: int 
 var index: int = 0
 var swap_mode: int
 var right_position: int
 
-var colors_to_match: Array
+
+var invalid_positions: Array[int]
+var current_level_set: Array
 var pieces: Array
+var is_restarting: bool = false
 var is_moving: bool = false
 
 @onready var piece_instance = preload("res://Entities/Pieces/Pieces.tscn")
 
 func _ready():
+	global_position = Global.start_position
 	Global.piece_handler = self
 	setup_game()
-	index = 1
+	
+	#rewind()
 
+
+func rewind():
+	is_restarting = true
+	var last_index = index
+	
+	var teste = [2, 18, 11, 6, 10]
+	for i in range((teste.size())):
+		index = teste[i]
+		swap_pieces(swap_mode)
+		await get_tree().create_timer(0.2).timeout
+		
+	index = last_index
+	is_restarting = false
+	
 func _physics_process(_delta):
 	inputs()
-	
+
+
+func change_position(x, y):
+	global_position = Vector2(215.5 + (120 * x), 75.5 + (120 * y))
 
 
 func setup_game():
+	rows = Global.rows
+	columns = Global.columns
 	
 	for r in rows:
+		var invalid: = columns * (r + 1) - 1
+		invalid_positions.append(invalid)
 		for c in columns:
 			var piece = piece_instance.instantiate()
 			piece.position = Vector2(c * 120 , r * 120)
@@ -37,18 +61,29 @@ func setup_game():
 			add_child(piece)
 			
 			pieces.append(piece)
-
-	var current_level: Array = Global.level_set
-	colors_to_match = Global.match_colors
+	
+	current_level_set = Global.level_set
 	swap_mode = Global.swap_mode
 	
+	if Global.level_set != null:
+		for i in range(min(pieces.size(), current_level_set.size())):
+			pieces[i].set_color(current_level_set[i])
+	else:
+		for i in range(min(pieces.size(), Global.mock_level_set.size())):
+			pieces[i].set_color(Global.mock_level_set[i])
+	
+	print(pieces.size())
 	right_position = pieces.size() / rows
-	
-	for i in range(min(pieces.size(), current_level.size())):
-		pieces[i].set_color(current_level[i])
-	
+	limit = pieces.size() - rows
+	print(limit)
 	spawn_selector.emit()
 
+
+func remove_pieces():
+	for i in range(pieces.size()):  
+		pieces[i].queue_free()
+		
+	
 
 func inputs(): 
 	if Input.is_action_just_pressed("right"):
@@ -63,7 +98,8 @@ func inputs():
 	if Input.is_action_just_pressed("down"):
 		check_movement(right_position)
 
-	if Input.is_action_just_pressed("action"):
+	if Input.is_action_just_pressed("action") and Global.game_manager.moves_left > 0:
+		Global.game_manager.moves_left -= 1
 		swap_pieces(swap_mode)
 
 
@@ -89,7 +125,6 @@ func swap_pieces(mode: int):
 		2: 
 			pieces_to_swap = cross
 			
-		
 	is_moving = true
 	var tween = create_tween().set_parallel(true)
 	
@@ -115,10 +150,10 @@ func swap_piece_index(swap_index: Array):
 
 
 func check_movement(value: int):
-	var inv_pos: int = columns - 2
+	var inverted_position: int = columns - 2
 	
 	if value > 1 or value < -1:
-		if index + value > limit:
+		if index + value >= limit:
 			index = index + -value * (rows - 2)
 			return
 		if index + value < 0:
@@ -127,9 +162,9 @@ func check_movement(value: int):
 			
 	if index + value in invalid_positions or index + value < 0:
 		if value > 0:
-			index = index - inv_pos 
+			index = index - inverted_position 
 			return
-		index = index + inv_pos
+		index = index + inverted_position
 		return
 	index += value
 

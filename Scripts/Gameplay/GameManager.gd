@@ -7,18 +7,18 @@ var moves_left: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.game_manager = self
 	moves_left = Global.level_moves
 	piece_set = Global.piece_handler.pieces
 	piece_rows = Global.piece_handler.rows
 
+
 func _process(_delta):
 	info.text = str("Restam: ", moves_left)
 	
-	if Input.is_action_just_pressed("action"):
-		moves_left -= 1
-	
 	if moves_left == 0:
 		finish_level()
+
 
 func finish_level():
 	if check_rows(Global.match_colors):
