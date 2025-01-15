@@ -47,15 +47,3 @@ Este plano abrange as funcionalidades principais que afetam diretamente a experi
 
 ### Testes de Usabilidade e Interface
 - Validar que os elementos visuais e de interação estejam acessíveis e alinhados com o design planejado.
-
----
-
-## 8. Atividades e Estimativas
-
-| **Atividade**               | **Duração Máxima** | **Objetivo**                                                                 |
-|------------------------------|--------------------|------------------------------------------------------------------------------|
-| Criação do Plano de Teste    | 20 minutos         | Planejar o trabalho da equipe.                                               |
-| Criação dos Cenários de Teste| 20 minutos         | Planejar e documentar os cenários que serão testados.                        |
-| Execução dos Testes          | 30 minutos         | Verificar na prática se as funcionalidades estão executando corretamente.    |
-| Relatório de Bugs            | 20 minutos         | Relatar de forma detalhada os bugs encontrados para o desenvolvedor.         |
-| Correção dos Bugs            | 2 semanas          | Desenvolvedor irá consertar os bugs encontrados.                             |
